@@ -32,16 +32,14 @@
 
     \textsc{\LARGE Arizona State University}\\[1.5cm]
 
-    \textsc{\LARGE High Energy Neutrinos}\\[1.5cm]
-
+    \textsc{\LARGE Supernova Relic Neutrinos}\\[1.5cm]
 
     \begin{figure}
       \includegraphics[width=\linewidth]{asu.png}
     \end{figure}
 
-
     \HRule \\[0.4cm]
-    { \huge \bfseries Diffuse neutrino flux from TDE}\\[0.4cm] 
+    { \huge \bfseries Formulation and models}\\[0.4cm] 
     \HRule \\[1.5cm]
 
     \textbf{Behnam Amiri}
@@ -58,8 +56,55 @@
 
   \end{titlepage}
 
-  \begin{enumerate}
-    \item Start here
-  \end{enumerate}
+  % \begin{enumerate}
+  %   \item Start here
+  % \end{enumerate}
+  A core-collapse supernova explosion is one of the most spectacular events in astrophysics,
+  and it attracts a great deal of attention from many physicists and astronomers. It
+  also produces a number of neutrinos and $99\%$ of its gravitational binding energy is
+  transformed to neutrinos.
+
+  \vspace{20px}
+
+  \textbf{Formulation}
+
+  \vspace{10px}
+
+  $
+    dn_v(E_v)=R_{SN}(z)\left(1+z\right)^3 \dfrac{dt}{dz} dz \dfrac{dN_v (E_v^')}{dE_v^'} dE_v^' \left(1+z\right)^{-3}
+  $
+  \\
+  \\
+  Since $E_v^'=(1+z) E_v$ we have
+  \\
+  \\
+  $
+    =R_{SN}(z)\left(1+z\right)^3 \dfrac{dt}{dz} dz \dfrac{dN_v (E_v^')}{dE_v^'} d\left[(1+z) E_v\right] \left(1+z\right)^{-3}
+    \\
+    \\
+    \\
+    \therefore ~~~ dn_v(E_v)=R_{SN}(z) \dfrac{dt}{dz} dz \dfrac{dN_v(E_v^')}{dE_v^'} \left(1+z\right) dE_v
+  $
+  \\
+  \begin{description}
+    \item[$E_v^'=(1+z) E_v:$ The energy of neutrinos at redshift $z$]
+    \item[$R_{SN}(z):$ Represents the supernova rate per comoving volume at $z$]
+    \item[$\dfrac{dN_v}{dE_v}:$ The number spectrum of neutrinos emitted by one supernova explosion]
+    \item[$\left(1+z\right)^{-3}$:  The expansion of the universe] 
+  \end{description}
+
+  \vspace{20px}
+
+  We know that $\dfrac{dF_v}{dE_v}=c \dfrac{dn_v}{dE_v}$ and $\dfrac{dz}{dt}=-H_0(1+z) \sqrt{\Omega_m(1+z)^3+\Omega_{\Lambda}}$ so we have the following:
+  
+  $
+    \\
+    \\
+    \dfrac{dF_v}{dE_v}=c \dfrac{d}{dE_v} \left[R_{SN}(z) \left(\dfrac{-1}{H_0(1+z) \sqrt{\Omega_m(1+z)^3+\Omega_{\Lambda}}}\right) dz \dfrac{dN_v(E_v^')}{dE_v^'} \left(1+z\right) dE_v\right]
+    \\
+    \\
+    \\
+    =-\dfrac{c}{H_0} \bigints\limits_{0}^{z_{max}} R_{SN}(z) \dfrac{dN_v(E_v^')}{dE_v^'}   \dfrac{1}{\sqrt{\Omega_m(1+z)^3+\Omega_{\Lambda}}}   dz
+  $
 
 \end{document}
