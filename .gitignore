@@ -9,3 +9,15 @@
 *.gz
 
 *.pdf
+
+*.blg
+
+*.bcf
+
+*.bbl
+
+*.out
+
+*.xml
+
+*-blx.bib
