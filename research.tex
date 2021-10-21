@@ -4,6 +4,9 @@
 \thispagestyle{empty}
 \usepackage{import}
 \usepackage{amsmath}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{flexisym}
 \usepackage{calligra}
@@ -12,7 +15,18 @@
 \usepackage[english]{babel}
 \usepackage{float}
 \usepackage[colorinlistoftodos]{todonotes}
-\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage{hyperref}
+
+\addbibresource{sample.bib}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,      
+  urlcolor=cyan,
+  pdfpagemode=FullScreen
+}
 
 \DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
 \DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
@@ -59,6 +73,12 @@
 
   \end{titlepage}
 
+  \begin{equation}
+    \label{eq:1}
+    \sum_{i=0}^{\infty} a_i x^i
+  \end{equation}
+
+  \pagebreak
 
   \textbf{I. Introduction}
 
@@ -191,7 +211,39 @@
   \\
   \\
   \\
-  We assume that gravitational collapses began at the redshift $z_{max}=5$.
+  We assume that gravitational collapses began at the redshift $z_{max}=5$. We have the functional form for the SFR per unit comoving volume as 
+  \\
+  \\
+  $
+    \psi_{\ast}=f_{\ast} \dfrac{32}{100} \dfrac{exp(3.4 z)}{exp(3.8 z)+45} \dfrac{\sqrt{\Omega_m(1+z^3)+\Omega_{\Lambda}}}{\left(1+z\right)^{3/2}} M_{\bigodot} ~ yr^{-1} ~ Mpc^{-3}
+  $
+  \\
+  \\
+  Note: \emph{parsec (pc)} is a unit for expressing distances to stars and galaxies. It represents the distance at which the radius of Earth’s orbit 
+  subtends an angle of one second of arc.
+  \\
+  \\
+  $
+    R_{SN}(z)=\dfrac{
+      \bigintssss\limits_{8 M_{\bigodot}}^{125 M_{\bigodot}} dm \phi(m) 
+    }{
+      \bigintssss\limits_{0 M_{\bigodot}}^{125 M_{\bigodot}} dm m \phi(m) 
+    } \psi_{\ast}
+    \\
+    \\
+    =\dfrac{
+      \bigintssss\limits_{8 M_{\bigodot}}^{125 M_{\bigodot}} dm \phi(m) 
+    }{
+      \bigintssss\limits_{0 M_{\bigodot}}^{125 M_{\bigodot}} dm m \phi(m) 
+    } f_{\ast} \dfrac{32}{100} \dfrac{exp(3.4 z)}{exp(3.8 z)+45} \dfrac{\sqrt{\Omega_m(1+z^3)+\Omega_{\Lambda}}}{\left(1+z\right)^{3/2}} M_{\bigodot} ~ yr^{-1}
+  $
+
+  Behnam was here The equation \ref{eq:1} shows a sum that is divergent.
+
+  It's also possible to link directly any word or \hyperlink{}{any sentence} in your document.
+
+  Please click here \href{https://www.physics.wisc.edu/directory/halzen-francis-l/}{Professor Cecilia Lunardini}
+
 
   \clearpage
 
@@ -213,7 +265,20 @@
       \\
       SFR & Star formation rate
       \\
+      UV
+      \\
     \hline
   \end{tabular}
+
+
+  \pagebreak
+
+  % This is a very important citation ever you know what I am saying \cite{testt}
+
+
+  As \textcite{testt} says that we are all humans to use \LaTeX{} for biblography managment
+
+  \printbibliography
+  
 
 \end{document}
